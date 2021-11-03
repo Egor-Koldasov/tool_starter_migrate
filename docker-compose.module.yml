@@ -7,5 +7,5 @@ services:
       - ./package.json:/app/package.json
       - ./tsconfig.json:/app/tsconfig.json
       - ./knexfile.ts:/app/knexfile.ts
-    environment:
-      DATABASE_URL: 'postgres://admin:devpassword@postgres:5432/dev_overview?sslmode=disable'
+      - ./dev.env:/app/dev.env
+      - ./test.env:/app/test.env

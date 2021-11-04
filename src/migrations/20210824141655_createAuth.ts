@@ -6,7 +6,7 @@ export async function up(knex: Knex): Promise<void> {
   await knex.schema.createTable('auth', (table) => {
     table.text('token').primary();
     table.integer('user_id').index();
-    table.foreign('user_id').references('id').inTable('app_user');
+    table.foreign('user_id').references('id').inTable('app_user').onUpdate('cascade').onDelete('cascade');
     table.timestamps(false, true);
   })
   await createTimestampTrigger('auth', knex)

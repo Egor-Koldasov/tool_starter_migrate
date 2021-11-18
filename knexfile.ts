@@ -4,7 +4,7 @@ import path from 'path';
 
 export const importEnv = (dirname: string, relPath: string) => dotenv.config({'path': path.resolve(dirname, relPath)});
 
-if (process.env.NODE_ENVIRONMENT === 'test') {
+if (process.env.NODE_ENV === 'test') {
   importEnv(__dirname, './test.env');
 }
 importEnv(__dirname, './dev.env');

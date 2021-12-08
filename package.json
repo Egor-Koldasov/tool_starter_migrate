@@ -4,7 +4,7 @@
   "description": "Migration setup",
   "main": "src/index.js",
   "scripts": {
-    "start": "npm run local:migrate",
+    "build": "npm run local:migrate",
     "local:migrate": "knex migrate:latest",
     "local:migrate-test": "NODE_ENV='test' knex migrate:latest",
     "migrate": "docker-compose run --rm migrate",

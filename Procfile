@@ -1,1 +1,0 @@
-migrate: npm run local:migrate
